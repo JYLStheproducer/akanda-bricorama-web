@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url=/akanda-bricorama-web/" />
+    <script>
+      // Redirige vers la racine du repo, mais garde le chemin pour React Router
+      var l = window.location;
+      var repo = '/akanda-bricorama-web/';
+      if (l.pathname.indexOf(repo) === 0) {
+        var newUrl = repo + '#/' + l.pathname.slice(repo.length) + l.search + l.hash;
+        window.location.replace(newUrl);
+      } else {
+        window.location.replace(repo);
+      }
+    </script>
+  </head>
+  <body></body>
+</html> 

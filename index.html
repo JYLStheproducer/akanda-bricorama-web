@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -21,6 +20,20 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bricorama_akanda" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta http-equiv="refresh" content="0; url=/" />
+    <script>
+      // Redirige vers la racine, mais garde le chemin pour React Router
+      var l = window.location;
+      var path = l.pathname.replace(/\/+/g, '/').replace(/^\/|\/$/g, '');
+      var repo = '/akanda-bricorama-web/';
+      if (l.pathname.indexOf(repo) === 0) {
+        var newUrl = repo + '#/' + l.pathname.slice(repo.length) + l.search + l.hash;
+        window.location.replace(newUrl);
+      } else {
+        window.location.replace(repo);
+      }
+    </script>
   </head>
 
   <body>

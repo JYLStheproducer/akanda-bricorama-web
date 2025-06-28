@@ -46,11 +46,7 @@ const Header = () => {
           <div className="flex items-center space-x-3">
             <div className="relative">
               <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-lg">
-                <img 
-                  src="/lovable-uploads/96dc2197-e9e4-4516-a7d7-2b0d35895dbd.png" 
-                  alt="Bricorama Logo" 
-                  className="w-8 h-8 object-contain"
-                />
+                {/* Logo supprimé (lovable) */}
               </div>
               <div className="absolute -top-1 -right-1 w-4 h-4 bg-secondary rounded-full flex items-center justify-center">
                 <span className="text-xs font-bold text-white">🔧</span>

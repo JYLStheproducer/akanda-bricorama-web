@@ -8,6 +8,9 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    watch: {
+      ignored: ['**/dist/**', '**/node_modules/**', '**/.git/**'],
+    },
   },
   plugins: [
     react(),
@@ -19,5 +22,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/akanda-bricorama-web/',
+  base: process.env.VERCEL ? '/' : '/akanda-bricorama-web/',
 }));
